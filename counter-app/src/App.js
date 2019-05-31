@@ -22,6 +22,14 @@ class App extends Component {
     this.setState({ counterIds: counters });
   };
 
+  handleDecrement = counter => {
+    const counters = [...this.state.counterIds];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    if (counters[index].value > 0) counters[index].value--;
+    this.setState({ counterIds: counters });
+  };
+
   handleIncrement = counter => {
     const counters = [...this.state.counterIds];
     const index = counters.indexOf(counter);
@@ -41,9 +49,9 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar
-          numberCounters={
-            this.state.counterIds.filter(element => element.value > 0).length
-          }
+          numberCounters={this.state.counterIds.reduce(function(a, b) {
+            return a + b.value;
+          }, 0)}
         />
         <main className="container">
           <Counters
@@ -51,6 +59,7 @@ class App extends Component {
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
             counterIds={this.state.counterIds}
+            onDecrement={this.handleDecrement}
           />
         </main>
       </React.Fragment>
