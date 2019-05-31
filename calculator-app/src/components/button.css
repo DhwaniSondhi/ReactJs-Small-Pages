@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  height: 4em;
+  width: 4em;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgoldenrodyellow;
+  outline: 1px solid gray;
+  padding: 10px;
+}
+.operator {
+  background-color: burlywood;
+}

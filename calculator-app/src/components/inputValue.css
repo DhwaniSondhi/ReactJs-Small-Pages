@@ -1,0 +1,15 @@
+.input-val {
+  display: flex;
+  height: 4em;
+  width: 100%;
+  color: white;
+  background-color: black;
+  outline: 1px solid black;
+  font-weight: bold;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  font-style: oblique;
+  margin-top: 2em;
+  padding-top: 15px;
+}
