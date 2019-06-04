@@ -3,8 +3,9 @@
   height: 4em;
   width: 100%;
   color: white;
-  background-color: black;
+  background-color: #00203fff;
   outline: 1px solid black;
+  color: #f6f2f5;
   font-weight: bold;
   justify-content: flex-end;
   align-items: center;
